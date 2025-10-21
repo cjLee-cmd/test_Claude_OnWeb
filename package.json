@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "chrome-devtools-mcp": "^0.8.1",
+    "playwright": "^1.56.1",
+    "puppeteer-core": "^24.25.0"
+  }
+}

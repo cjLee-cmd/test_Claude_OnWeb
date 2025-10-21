@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome DevTools MCP Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 50px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .features h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-item h3 {
+            font-size: 18px;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+
+        .code-block {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+
+        .code-block code {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="emoji">🚀</span>
+        <h1>Chrome DevTools MCP</h1>
+        <p>
+            Chrome DevTools를 MCP(Model Context Protocol)로 활용하는 프로젝트입니다.<br>
+            AI 코딩 어시스턴트가 브라우저를 제어하고 디버깅할 수 있습니다.
+        </p>
+
+        <div class="links">
+            <a href="google-demo.html" class="btn btn-primary">🌐 Google 데모 보기</a>
+            <a href="README-MCP.md" class="btn btn-secondary">📖 문서 보기</a>
+            <a href="https://github.com/ChromeDevTools/chrome-devtools-mcp" class="btn btn-secondary" target="_blank">
+                💻 GitHub 저장소
+            </a>
+        </div>
+
+        <div class="features">
+            <h2>✨ 주요 기능</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>🎯 자동화</h3>
+                    <p>브라우저 입력 및 탐색 자동화</p>
+                </div>
+                <div class="feature-item">
+                    <h3>⚡ 성능 분석</h3>
+                    <p>웹사이트 성능 추적 및 분석</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🐛 디버깅</h3>
+                    <p>스크린샷, 콘솔, 네트워크 분석</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🤖 AI 통합</h3>
+                    <p>Claude, Gemini 등과 연동</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="code-block">
+            <code>
+# Chrome DevTools MCP 설치<br>
+npm install chrome-devtools-mcp<br>
+<br>
+# Claude Code에서 사용<br>
+claude mcp add chrome-devtools npx chrome-devtools-mcp@latest
+            </code>
+        </div>
+
+        <p style="margin-top: 40px; font-size: 14px; color: #999;">
+            🤖 Generated with <a href="https://claude.com/claude-code" style="color: #667eea; text-decoration: none;">Claude Code</a>
+        </p>
+    </div>
+</body>
+</html>
