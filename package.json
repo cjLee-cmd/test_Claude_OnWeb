@@ -1,0 +1,25 @@
+{
+  "name": "test_claude_onweb",
+  "version": "0.1.0",
+  "description": "Claude Code를 활용한 웹 개발 테스트 프로젝트",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjLee-cmd/test_Claude_OnWeb.git"
+  },
+  "keywords": [
+    "claude",
+    "web",
+    "test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjLee-cmd/test_Claude_OnWeb/issues"
+  },
+  "homepage": "https://github.com/cjLee-cmd/test_Claude_OnWeb#readme"
+}
