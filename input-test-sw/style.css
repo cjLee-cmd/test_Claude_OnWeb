@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.test-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+
+.test-button:hover {
+    background-color: #45a049;
+}
+
+.test-button:active {
+    background-color: #3d8b40;
+}
+
+.test-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.progress-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    width: 0%;
+    transition: width 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.container {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.sheet-wrapper {
+    margin-top: 20px;
+}
+
+.sheet-wrapper h3 {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.sheet-container {
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.sheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.sheet-table thead {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+}
+
+.sheet-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #ddd;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.sheet-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    color: #333;
+}
+
+.sheet-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.sheet-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.sheet-table tbody tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.sheet-table tbody tr.copying {
+    background-color: #fff9c4;
+    animation: pulse 0.5s;
+}
+
+.sheet-table tbody tr.copied {
+    background-color: #c8e6c9;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+    }
+}

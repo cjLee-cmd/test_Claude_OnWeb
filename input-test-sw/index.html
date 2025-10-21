@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Test SW</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Input Test SW</h1>
+        <button id="testButton" class="test-button">Test</button>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0%</div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- 컨테이너 1 -->
+        <div class="container" id="container1">
+            <h2>컨테이너 1</h2>
+            <div class="sheet-wrapper">
+                <h3>시트 1 (원본 데이터)</h3>
+                <div class="sheet-container">
+                    <table id="sheet1" class="sheet-table">
+                        <thead>
+                            <tr>
+                                <th>인덱스</th>
+                                <th>이름</th>
+                                <th>전화번호</th>
+                                <th>주소</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sheet1Body">
+                            <!-- 데이터가 JavaScript로 채워집니다 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 컨테이너 2 -->
+        <div class="container" id="container2">
+            <h2>컨테이너 2</h2>
+            <div class="sheet-wrapper">
+                <h3>시트 2 (대상 데이터)</h3>
+                <div class="sheet-container">
+                    <table id="sheet2" class="sheet-table">
+                        <thead>
+                            <tr>
+                                <th>인덱스</th>
+                                <th>이름</th>
+                                <th>전화번호</th>
+                                <th>주소</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sheet2Body">
+                            <!-- 데이터가 Test 버튼을 통해 복사됩니다 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
